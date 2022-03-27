@@ -1,0 +1,8 @@
+"\C-g\C-k": "git diff `git rev-parse --show-toplevel`/`git status --porcelain --ignore-submodules | sed \"q;d\" | awk '{print $2}'`\e[1;5D\e[1;5D\e[1;5D\e[1;5D\e[1;5D"
+"\C-g\C-a": "git add `git rev-parse --show-toplevel`/`git status --porcelain --ignore-submodules | sed \"q;d\" | awk '{print $2}'`\e[1;5D\e[1;5D\e[1;5D\e[1;5D\e[1;5D"
+"\C-g\C-h": "git status"
+"\C-g\C-m": "git commit --amend -m \"$(git log --format=%B -n1)\" -m "
+"\C-g\C-p": "git push origin `git rev-parse --abbrev-ref HEAD`"
+"\C-g\C-b": "git rev-parse --abbrev-ref HEAD"
+"\C-g\C-p\C-f": "git push origin `git rev-parse --abbrev-ref HEAD` -f"
+"\C-g\C-e": "egrep -R $PWD 2>/dev/null\eOH\e[1;5C\e[1;5C "
